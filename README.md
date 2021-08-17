@@ -1,4 +1,4 @@
-# online-retail-store-2
+# online-retail-store
 A sample Spring REST online store
 
 ### 1. View customers
