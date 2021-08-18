@@ -1,7 +1,7 @@
 # online-retail-store
 A sample Spring REST online store.
 
-[Insomnia](https://github.com/Kong/insomnia) was used to test the following REST requests:
+The console and [Insomnia](https://github.com/Kong/insomnia) were used to test the following REST requests:
 
 ### 1. View customers
 ```
@@ -39,20 +39,6 @@ Output:
             "href": "http://localhost:8080/customers"
           }
         }
-      },
-      {
-        "id": 3,
-        "companyName": "XYZ Company",
-        "address": "246 First St",
-        "country": "Portugal",
-        "_links": {
-          "self": {
-            "href": "http://localhost:8080/customers/3"
-          },
-          "customers": {
-            "href": "http://localhost:8080/customers"
-          }
-        }
       }
     ]
   },
@@ -70,7 +56,12 @@ curl -X POST localhost:8080/customers -H "Content-Type:application/json" -d '{"c
 ```
 Output:
 ```
-{"id":3,"companyName":"XYZ Company","address":"246 First St","country":"Spain"}
+{
+  "id": 3,
+  "companyName": "XYZ Company",
+  "address": "246 First St",
+  "country": "Spain"
+}
 ```
 
 ### 3. Update a customer
