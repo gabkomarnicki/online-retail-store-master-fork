@@ -1,5 +1,7 @@
 # online-retail-store
-A sample Spring REST online store
+A sample Spring REST online store.
+
+[Insomnia](https://github.com/Kong/insomnia) was used to test the following REST requests:
 
 ### 1. View customers
 ```
@@ -84,3 +86,12 @@ Output:
   "country": "Switzerland"
 }
 ```
+### 4. Delete a customer
+```
+curl -X DELETE http://localhost:8080/customers/3
+```
+Output:
+```
+No body returned for response
+```
+
