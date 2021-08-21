@@ -12,7 +12,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @Component
 public class CustomerModelAssembler implements
     RepresentationModelAssembler<Customer, EntityModel<Customer>> {
-
+	//customer model assembler
     @Override
     public EntityModel<Customer> toModel(Customer customer) {
 

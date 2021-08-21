@@ -25,7 +25,7 @@ public class CustomerController {
         this.assembler = assembler;
         this.contactRepository = contactRepository;
     }
-  //find all the customers
+    //find all the customers
     @GetMapping("/customers")
     CollectionModel<EntityModel<Customer>> all() {
 
@@ -66,7 +66,7 @@ public class CustomerController {
                     return repository.save(newCustomer);
                 });
     }
-    //update customer and contact
+    //update customer and contact by customer id and contact id
   	@PutMapping("/customers/{id}/contact/{contactId}")
     Customer updateCustomerContact(@PathVariable Long id, @PathVariable Long contactId) {
   		Customer customer = repository.findById(id).orElseThrow(RuntimeException::new);
