@@ -28,7 +28,7 @@ public class Customer {
         this.country = country;
         this.contact = null;
     }
-
+    //accessors and mutators
     public Long getId() {
         return id;
     }
@@ -68,7 +68,7 @@ public class Customer {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
-	
+	//retrive all the information of customer
     @Override
     public String toString() {
         return "Customer{" +
@@ -79,7 +79,7 @@ public class Customer {
                 ", contact='" + contact + '\'' +
                 '}';
     }
-
+    
     @Override
     public boolean equals(Object o) {
 

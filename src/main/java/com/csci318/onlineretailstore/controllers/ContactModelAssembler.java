@@ -10,7 +10,7 @@ import com.csci318.onlineretailstore.models.Contact;
 
 @Component
 public class ContactModelAssembler implements RepresentationModelAssembler<Contact, EntityModel<Contact>> {
-
+	//contact model assembler
     @Override
     public EntityModel<Contact> toModel(Contact contact) {
 

@@ -12,18 +12,20 @@ public class Contact {
     private @Id @GeneratedValue Long id;
     private String firstName;
     private String lastName;
+    private String phone;
     private String email;
     private String position;
 
     Contact() {}
 
-    public Contact(String firstName, String lastName, String email, String position) {
+    public Contact(String firstName, String lastName, String phone, String email, String position) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.email = email;
         this.position = position;
     }
-
+    //accessors and mutators
     public String getName() {
         return this.firstName + " " + this.lastName;
     }
@@ -73,7 +75,15 @@ public class Contact {
     public void setPosition(String position) {
         this.position = position;
     }
+    
+    public String getPhone() {
+        return phone;
+    }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    
     @Override
     public boolean equals(Object o) {
 
@@ -89,15 +99,16 @@ public class Contact {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.id, this.firstName, this.lastName, this.email, this.position);
+        return Objects.hash(this.id, this.firstName, this.phone ,this.lastName, this.email, this.position);
     }
-
+    //retrive all the information
     @Override
     public String toString() {
         return "Contact{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", position='" + position + '\'' +
                 '}';
