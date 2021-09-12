@@ -1,15 +1,15 @@
 package com.csci318.onlineretailstore.service;
 
 import com.csci318.onlineretailstore.models.Order;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.http.ResponseEntity;
 
 public interface OrderServiceIF {
 
-    abstract CollectionModel<EntityModel<Order>> all();
-    abstract Order newOrder(Order newOrder);
-    abstract EntityModel<Order> one(Long id);
-    abstract Order replaceOrder(Order newOrder, Long id);
-    abstract void deleteOrder(Long id);
+    public abstract CollectionModel<EntityModel<Order>> all();
+    public abstract ResponseEntity<?> newOrder(Order newOrder);
+    public abstract EntityModel<Order> one(Long id);
+    public abstract ResponseEntity<?> replaceOrder(Order newOrder,Long id);
+    public abstract ResponseEntity<?> deleteOrder(Long id);
 }
